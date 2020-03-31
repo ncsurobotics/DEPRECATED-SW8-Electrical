@@ -1,0 +1,459 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD20\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">20/03/30</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">21:08:31</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:02</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc" class="file"><acronym title="C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc">C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Waived Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">34</td></tr>
+</table>
+</td>
+</table><a name="IDETVKBPXOK4J3EO2PR4WKDA1OL0XYJ24OOKI5ONW3MFZW4R1GVZJ"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDLMWXWJDN4SQAE1PGSATYJKBVZOJGA0FTMEVYA5MGQOWICYK1GZ3C">Clearance Constraint (Gap=10mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDZX5NSQ41QJ4ZNA2PF32G45CFKLWUALZESKKHIACEY5AJ3E2AOUTM">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDSQY5NZMQR0QGH2Y23DKT2HLUFC1MIAWUSBCV51EOQPHCYQHZA2HM">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID4N5LCVOC3DI4LFNNHQILQA51OJBJ3KQDJGCPDGIP5NV2OKFU3SCJ">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDZLNRD5CZE5NFHXWIPWFJ12PFXGXFQ4EUMBT5EKELAYWGEGJNE0IO">Width Constraint (Min=20mil) (Max=20mil) (Preferred=20mil) (InNet('VCC'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDYTUNR01TEZXZBKGGM311MO5SVCLYYNKXKT10XKGI2V2WQYCQI5HG">Width Constraint (Min=10mil) (Max=20mil) (Preferred=10mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID1VIPHW0M44WRKJV3O2GQDWV2BLBE3JMHO3GPR0P2R4TK3C1QBOAJ">Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDXPWTR1PVAE23KRUJ0QSXA5OSEFUSSMF0TKUV0CJDBIEFLLRVDRUB">Hole Size Constraint (Min=1mil) (Max=100mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDNV4CIPCN515BKDCKUTTEQCNAGBPQ34A1CRMEJ3KMHEA1WTJKBGVO">Hole To Hole Clearance (Gap=10mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDNV4UF5DQM1U2TBUEBPWKR3VWD3CGON4WXSSROL2E5HGZZ2OP0AP">Minimum Solder Mask Sliver (Gap=10mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDI3MEPAF3ATP1LJT2Z3XCY1PYRK5DNBF2K3GW0VI1JMAFEYP4GHYG">Silk To Solder Mask (Clearance=10mil) (IsPad),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDLWXF4ZFCUL13HDLL03IXK1YXQB1O35VHNYUSJKN0JUK4HD2L11HN">Silk to Silk (Clearance=10mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDGN30T3ASMT30FCO5ZCMVTOBAOJTDGKM32ZXN0XKEGQUXINVIV5YJ">Net Antennae (Tolerance=0mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDYXZJ0CXXNUSWGE0PFQFKJ0ACFCHJIV1OGFXKVXNUKMCED3PJ4BS">Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Waived Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDBEHDG4CVHGDSMA02HXSYYJ0VDGAKUICJFVAP55OMRIKH11F3SKBH">Minimum Solder Mask Sliver (Gap=10mil) (All),(All)</a></td>
+<td class="column2">2</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDXWCZYPYU5IP5PFRYIOH2VC2FELFBGRN40MLY4HNFZVIOYRKDL2XJ">Silk To Solder Mask (Clearance=10mil) (IsPad),(All)</a></td>
+<td class="column2">32</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">34</td>
+</tr>
+</table><br><a name="IDKSVCAK5E1BGKD1MGFDB0NPULEDAUFFIHK4S5SCJ5D25CZU1LGEAH"><h2>Rule Violations</h2></a><a name="IDZYM3SUTJ50HDL2BEB2OSNZ0UOEJTQKTNNSR1CFRKOMG1FUKYUZN"><h2>Waived Violations</h2></a><a name="IDBEHDG4CVHGDSMA02HXSYYJ0VDGAKUICJFVAP55OMRIKH11F3SKBH"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="waived">Minimum Solder Mask Sliver (Gap=10mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2504.69mil|Location2.X=2515.94mil|Location1.Y=3749.375mil|Location2.Y=3760.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2504.69mil|Location2.X=2515.94mil|Location1.Y=3749.375mil|Location2.Y=3760.625mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2.63mil &lt; 10mil) Between Pad U34-1(2530mil,3780mil) on Multi-Layer And Pad U34-2(2530mil,3730mil) on Multi-Layer [Top Solder] Mask Sliver [2.63mil] / [Bottom Solder] Mask Sliver [2.63mil]</acronym></a><br>Waived by Byron Qi at 20/03/30 21:06:18</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2504.69mil|Location2.X=2515.94mil|Location1.Y=3699.375mil|Location2.Y=3710.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2504.69mil|Location2.X=2515.94mil|Location1.Y=3699.375mil|Location2.Y=3710.625mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2.63mil &lt; 10mil) Between Pad U34-2(2530mil,3730mil) on Multi-Layer And Pad U34-3(2530mil,3680mil) on Multi-Layer [Top Solder] Mask Sliver [2.63mil] / [Bottom Solder] Mask Sliver [2.63mil]</acronym></a><br>Waived by Byron Qi at 20/03/30 21:06:26</td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDXWCZYPYU5IP5PFRYIOH2VC2FELFBGRN40MLY4HNFZVIOYRKDL2XJ"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="waived">Silk To Solder Mask (Clearance=10mil) (IsPad),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2081.934mil|Location2.X=2093.184mil|Location1.Y=4620.172mil|Location2.Y=4631.422mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2081.934mil|Location2.X=2093.184mil|Location1.Y=4620.172mil|Location2.Y=4631.422mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.874mil &lt; 10mil) Between Pad R3_1-1(2060mil,4650.404mil) on Top Layer And Track (2095.433mil,4625.797mil)(2103.307mil,4625.797mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]</acronym></a><br>Waived by Byron Qi at 20/03/30 21:07:18</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2081.934mil|Location2.X=2093.184mil|Location1.Y=4669.385mil|Location2.Y=4680.635mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2081.934mil|Location2.X=2093.184mil|Location1.Y=4669.385mil|Location2.Y=4680.635mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.874mil &lt; 10mil) Between Pad R3_1-1(2060mil,4650.404mil) on Top Layer And Track (2095.433mil,4675.01mil)(2103.307mil,4675.01mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]</acronym></a><br>Waived by Byron Qi at 20/03/30 21:07:18</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2105.556mil|Location2.X=2116.806mil|Location1.Y=4620.172mil|Location2.Y=4631.422mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2105.556mil|Location2.X=2116.806mil|Location1.Y=4620.172mil|Location2.Y=4631.422mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.874mil &lt; 10mil) Between Pad R3_1-2(2138.74mil,4650.404mil) on Top Layer And Track (2095.433mil,4625.797mil)(2103.307mil,4625.797mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]</acronym></a><br>Waived by Byron Qi at 20/03/30 21:07:18</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2105.455mil|Location2.X=2116.705mil|Location1.Y=4671.976mil|Location2.Y=4683.226mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2105.455mil|Location2.X=2116.705mil|Location1.Y=4671.976mil|Location2.Y=4683.226mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (8.513mil &lt; 10mil) Between Pad R3_1-2(2138.74mil,4650.404mil) on Top Layer And Track (2095.433mil,4675.01mil)(2103.307mil,4675.01mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [8.513mil]</acronym></a><br>Waived by Byron Qi at 20/03/30 21:07:18</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2081.934mil|Location2.X=2093.184mil|Location1.Y=4370.172mil|Location2.Y=4381.422mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2081.934mil|Location2.X=2093.184mil|Location1.Y=4370.172mil|Location2.Y=4381.422mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.874mil &lt; 10mil) Between Pad R3_2-1(2060mil,4400.404mil) on Top Layer And Track (2095.433mil,4375.797mil)(2103.307mil,4375.797mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]</acronym></a><br>Waived by Byron Qi at 20/03/30 21:07:18</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2081.934mil|Location2.X=2093.184mil|Location1.Y=4419.385mil|Location2.Y=4430.635mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2081.934mil|Location2.X=2093.184mil|Location1.Y=4419.385mil|Location2.Y=4430.635mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.874mil &lt; 10mil) Between Pad R3_2-1(2060mil,4400.404mil) on Top Layer And Track (2095.433mil,4425.01mil)(2103.307mil,4425.01mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]</acronym></a><br>Waived by Byron Qi at 20/03/30 21:07:18</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2105.556mil|Location2.X=2116.806mil|Location1.Y=4370.172mil|Location2.Y=4381.422mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2105.556mil|Location2.X=2116.806mil|Location1.Y=4370.172mil|Location2.Y=4381.422mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.874mil &lt; 10mil) Between Pad R3_2-2(2138.74mil,4400.404mil) on Top Layer And Track (2095.433mil,4375.797mil)(2103.307mil,4375.797mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]</acronym></a><br>Waived by Byron Qi at 20/03/30 21:07:18</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2105.455mil|Location2.X=2116.705mil|Location1.Y=4421.976mil|Location2.Y=4433.226mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2105.455mil|Location2.X=2116.705mil|Location1.Y=4421.976mil|Location2.Y=4433.226mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (8.513mil &lt; 10mil) Between Pad R3_2-2(2138.74mil,4400.404mil) on Top Layer And Track (2095.433mil,4425.01mil)(2103.307mil,4425.01mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [8.513mil]</acronym></a><br>Waived by Byron Qi at 20/03/30 21:07:18</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2081.934mil|Location2.X=2093.184mil|Location1.Y=4119.769mil|Location2.Y=4131.019mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2081.934mil|Location2.X=2093.184mil|Location1.Y=4119.769mil|Location2.Y=4131.019mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.874mil &lt; 10mil) Between Pad R3_3-1(2060mil,4150mil) on Top Layer And Track (2095.433mil,4125.394mil)(2103.307mil,4125.394mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]</acronym></a><br>Waived by Byron Qi at 20/03/30 21:07:18</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2081.934mil|Location2.X=2093.184mil|Location1.Y=4168.981mil|Location2.Y=4180.231mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2081.934mil|Location2.X=2093.184mil|Location1.Y=4168.981mil|Location2.Y=4180.231mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.874mil &lt; 10mil) Between Pad R3_3-1(2060mil,4150mil) on Top Layer And Track (2095.433mil,4174.606mil)(2103.307mil,4174.606mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]</acronym></a><br>Waived by Byron Qi at 20/03/30 21:07:18</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2105.556mil|Location2.X=2116.806mil|Location1.Y=4119.769mil|Location2.Y=4131.019mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2105.556mil|Location2.X=2116.806mil|Location1.Y=4119.769mil|Location2.Y=4131.019mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.874mil &lt; 10mil) Between Pad R3_3-2(2138.74mil,4150mil) on Top Layer And Track (2095.433mil,4125.394mil)(2103.307mil,4125.394mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]</acronym></a><br>Waived by Byron Qi at 20/03/30 21:07:18</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2105.455mil|Location2.X=2116.705mil|Location1.Y=4171.572mil|Location2.Y=4182.822mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2105.455mil|Location2.X=2116.705mil|Location1.Y=4171.572mil|Location2.Y=4182.822mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (8.513mil &lt; 10mil) Between Pad R3_3-2(2138.74mil,4150mil) on Top Layer And Track (2095.433mil,4174.606mil)(2103.307mil,4174.606mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [8.513mil]</acronym></a><br>Waived by Byron Qi at 20/03/30 21:07:18</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2081.934mil|Location2.X=2093.184mil|Location1.Y=3869.769mil|Location2.Y=3881.019mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2081.934mil|Location2.X=2093.184mil|Location1.Y=3869.769mil|Location2.Y=3881.019mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.874mil &lt; 10mil) Between Pad R3_4-1(2060mil,3900mil) on Top Layer And Track (2095.433mil,3875.394mil)(2103.307mil,3875.394mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]</acronym></a><br>Waived by Byron Qi at 20/03/30 21:07:18</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2081.934mil|Location2.X=2093.184mil|Location1.Y=3918.981mil|Location2.Y=3930.231mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2081.934mil|Location2.X=2093.184mil|Location1.Y=3918.981mil|Location2.Y=3930.231mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.874mil &lt; 10mil) Between Pad R3_4-1(2060mil,3900mil) on Top Layer And Track (2095.433mil,3924.606mil)(2103.307mil,3924.606mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]</acronym></a><br>Waived by Byron Qi at 20/03/30 21:07:18</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2105.556mil|Location2.X=2116.806mil|Location1.Y=3869.769mil|Location2.Y=3881.019mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2105.556mil|Location2.X=2116.806mil|Location1.Y=3869.769mil|Location2.Y=3881.019mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.874mil &lt; 10mil) Between Pad R3_4-2(2138.74mil,3900mil) on Top Layer And Track (2095.433mil,3875.394mil)(2103.307mil,3875.394mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]</acronym></a><br>Waived by Byron Qi at 20/03/30 21:07:18</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2105.455mil|Location2.X=2116.705mil|Location1.Y=3921.572mil|Location2.Y=3932.822mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2105.455mil|Location2.X=2116.705mil|Location1.Y=3921.572mil|Location2.Y=3932.822mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (8.513mil &lt; 10mil) Between Pad R3_4-2(2138.74mil,3900mil) on Top Layer And Track (2095.433mil,3924.606mil)(2103.307mil,3924.606mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [8.513mil]</acronym></a><br>Waived by Byron Qi at 20/03/30 21:07:18</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2081.934mil|Location2.X=2093.184mil|Location1.Y=4509.769mil|Location2.Y=4521.019mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2081.934mil|Location2.X=2093.184mil|Location1.Y=4509.769mil|Location2.Y=4521.019mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.874mil &lt; 10mil) Between Pad R4_1-1(2060mil,4540mil) on Top Layer And Track (2095.433mil,4515.394mil)(2103.307mil,4515.394mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]</acronym></a><br>Waived by Byron Qi at 20/03/30 21:07:18</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2081.934mil|Location2.X=2093.184mil|Location1.Y=4558.981mil|Location2.Y=4570.231mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2081.934mil|Location2.X=2093.184mil|Location1.Y=4558.981mil|Location2.Y=4570.231mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.874mil &lt; 10mil) Between Pad R4_1-1(2060mil,4540mil) on Top Layer And Track (2095.433mil,4564.606mil)(2103.307mil,4564.606mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]</acronym></a><br>Waived by Byron Qi at 20/03/30 21:07:18</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2105.556mil|Location2.X=2116.806mil|Location1.Y=4509.769mil|Location2.Y=4521.019mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2105.556mil|Location2.X=2116.806mil|Location1.Y=4509.769mil|Location2.Y=4521.019mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.874mil &lt; 10mil) Between Pad R4_1-2(2138.74mil,4540mil) on Top Layer And Track (2095.433mil,4515.394mil)(2103.307mil,4515.394mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]</acronym></a><br>Waived by Byron Qi at 20/03/30 21:07:18</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2105.455mil|Location2.X=2116.705mil|Location1.Y=4561.572mil|Location2.Y=4572.822mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2105.455mil|Location2.X=2116.705mil|Location1.Y=4561.572mil|Location2.Y=4572.822mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (8.513mil &lt; 10mil) Between Pad R4_1-2(2138.74mil,4540mil) on Top Layer And Track (2095.433mil,4564.606mil)(2103.307mil,4564.606mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [8.513mil]</acronym></a><br>Waived by Byron Qi at 20/03/30 21:07:18</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2081.934mil|Location2.X=2093.184mil|Location1.Y=4259.769mil|Location2.Y=4271.019mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2081.934mil|Location2.X=2093.184mil|Location1.Y=4259.769mil|Location2.Y=4271.019mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.874mil &lt; 10mil) Between Pad R4_2-1(2060mil,4290mil) on Top Layer And Track (2095.433mil,4265.394mil)(2103.307mil,4265.394mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]</acronym></a><br>Waived by Byron Qi at 20/03/30 21:07:18</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2081.934mil|Location2.X=2093.184mil|Location1.Y=4308.981mil|Location2.Y=4320.231mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2081.934mil|Location2.X=2093.184mil|Location1.Y=4308.981mil|Location2.Y=4320.231mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.874mil &lt; 10mil) Between Pad R4_2-1(2060mil,4290mil) on Top Layer And Track (2095.433mil,4314.606mil)(2103.307mil,4314.606mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]</acronym></a><br>Waived by Byron Qi at 20/03/30 21:07:18</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2105.556mil|Location2.X=2116.806mil|Location1.Y=4259.769mil|Location2.Y=4271.019mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2105.556mil|Location2.X=2116.806mil|Location1.Y=4259.769mil|Location2.Y=4271.019mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.874mil &lt; 10mil) Between Pad R4_2-2(2138.74mil,4290mil) on Top Layer And Track (2095.433mil,4265.394mil)(2103.307mil,4265.394mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]</acronym></a><br>Waived by Byron Qi at 20/03/30 21:07:18</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2105.455mil|Location2.X=2116.705mil|Location1.Y=4311.572mil|Location2.Y=4322.822mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2105.455mil|Location2.X=2116.705mil|Location1.Y=4311.572mil|Location2.Y=4322.822mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (8.513mil &lt; 10mil) Between Pad R4_2-2(2138.74mil,4290mil) on Top Layer And Track (2095.433mil,4314.606mil)(2103.307mil,4314.606mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [8.513mil]</acronym></a><br>Waived by Byron Qi at 20/03/30 21:07:18</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2081.934mil|Location2.X=2093.184mil|Location1.Y=4009.365mil|Location2.Y=4020.615mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2081.934mil|Location2.X=2093.184mil|Location1.Y=4009.365mil|Location2.Y=4020.615mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.874mil &lt; 10mil) Between Pad R4_3-1(2060mil,4039.596mil) on Top Layer And Track (2095.433mil,4014.99mil)(2103.307mil,4014.99mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]</acronym></a><br>Waived by Byron Qi at 20/03/30 21:07:18</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2081.934mil|Location2.X=2093.184mil|Location1.Y=4058.578mil|Location2.Y=4069.828mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2081.934mil|Location2.X=2093.184mil|Location1.Y=4058.578mil|Location2.Y=4069.828mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.874mil &lt; 10mil) Between Pad R4_3-1(2060mil,4039.596mil) on Top Layer And Track (2095.433mil,4064.203mil)(2103.307mil,4064.203mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]</acronym></a><br>Waived by Byron Qi at 20/03/30 21:07:18</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2105.556mil|Location2.X=2116.806mil|Location1.Y=4009.365mil|Location2.Y=4020.615mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2105.556mil|Location2.X=2116.806mil|Location1.Y=4009.365mil|Location2.Y=4020.615mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.874mil &lt; 10mil) Between Pad R4_3-2(2138.74mil,4039.596mil) on Top Layer And Track (2095.433mil,4014.99mil)(2103.307mil,4014.99mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]</acronym></a><br>Waived by Byron Qi at 20/03/30 21:07:18</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2105.455mil|Location2.X=2116.705mil|Location1.Y=4061.169mil|Location2.Y=4072.419mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2105.455mil|Location2.X=2116.705mil|Location1.Y=4061.169mil|Location2.Y=4072.419mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (8.513mil &lt; 10mil) Between Pad R4_3-2(2138.74mil,4039.596mil) on Top Layer And Track (2095.433mil,4064.203mil)(2103.307mil,4064.203mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [8.513mil]</acronym></a><br>Waived by Byron Qi at 20/03/30 21:07:18</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2082.564mil|Location2.X=2093.814mil|Location1.Y=3759.365mil|Location2.Y=3770.615mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2082.564mil|Location2.X=2093.814mil|Location1.Y=3759.365mil|Location2.Y=3770.615mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.874mil &lt; 10mil) Between Pad R4_4-1(2060.63mil,3789.596mil) on Top Layer And Track (2096.063mil,3764.99mil)(2103.937mil,3764.99mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]</acronym></a><br>Waived by Byron Qi at 20/03/30 21:07:18</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2082.564mil|Location2.X=2093.814mil|Location1.Y=3808.578mil|Location2.Y=3819.828mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2082.564mil|Location2.X=2093.814mil|Location1.Y=3808.578mil|Location2.Y=3819.828mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.874mil &lt; 10mil) Between Pad R4_4-1(2060.63mil,3789.596mil) on Top Layer And Track (2096.063mil,3814.203mil)(2103.937mil,3814.203mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]</acronym></a><br>Waived by Byron Qi at 20/03/30 21:07:18</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2106.186mil|Location2.X=2117.436mil|Location1.Y=3759.365mil|Location2.Y=3770.615mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2106.186mil|Location2.X=2117.436mil|Location1.Y=3759.365mil|Location2.Y=3770.615mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (7.874mil &lt; 10mil) Between Pad R4_4-2(2139.37mil,3789.596mil) on Top Layer And Track (2096.063mil,3764.99mil)(2103.937mil,3764.99mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]</acronym></a><br>Waived by Byron Qi at 20/03/30 21:07:18</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2106.085mil|Location2.X=2117.335mil|Location1.Y=3811.169mil|Location2.Y=3822.419mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2106.085mil|Location2.X=2117.335mil|Location1.Y=3811.169mil|Location2.Y=3822.419mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (8.513mil &lt; 10mil) Between Pad R4_4-2(2139.37mil,3789.596mil) on Top Layer And Track (2096.063mil,3814.203mil)(2103.937mil,3814.203mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [8.513mil]</acronym></a><br>Waived by Byron Qi at 20/03/30 21:07:18</td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

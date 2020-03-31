@@ -1,0 +1,91 @@
+Protel Design System Design Rule Check
+PCB File : C:\Users\Public\Documents\Altium\Projects\Optoisolator-Board-master\OptoPCB.PcbDoc
+Date     : 20/03/30
+Time     : 21:08:31
+
+Processing Rule : Clearance Constraint (Gap=10mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=20mil) (Max=20mil) (Preferred=20mil) (InNet('VCC'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=10mil) (Max=20mil) (Preferred=10mil) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=1mil) (Max=100mil) (All)
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=10mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=10mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Silk To Solder Mask (Clearance=10mil) (IsPad),(All)
+Rule Violations :0
+
+Processing Rule : Silk to Silk (Clearance=10mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Net Antennae (Tolerance=0mil) (All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)
+Rule Violations :0
+
+Waived Violations Of Rule : Minimum Solder Mask Sliver (Gap=10mil) (All),(All)
+   Waived Violation between Minimum Solder Mask Sliver Constraint: (2.63mil < 10mil) Between Pad U34-1(2530mil,3780mil) on Multi-Layer And Pad U34-2(2530mil,3730mil) on Multi-Layer [Top Solder] Mask Sliver [2.63mil] / [Bottom Solder] Mask Sliver [2.63mil]Waived by Byron Qi at 20/03/30 21:06:18
+   Waived Violation between Minimum Solder Mask Sliver Constraint: (2.63mil < 10mil) Between Pad U34-2(2530mil,3730mil) on Multi-Layer And Pad U34-3(2530mil,3680mil) on Multi-Layer [Top Solder] Mask Sliver [2.63mil] / [Bottom Solder] Mask Sliver [2.63mil]Waived by Byron Qi at 20/03/30 21:06:26
+Waived Violations :2
+
+Waived Violations Of Rule : Silk To Solder Mask (Clearance=10mil) (IsPad),(All)
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (7.874mil < 10mil) Between Pad R3_1-1(2060mil,4650.404mil) on Top Layer And Track (2095.433mil,4625.797mil)(2103.307mil,4625.797mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]Waived by Byron Qi at 20/03/30 21:07:18
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (7.874mil < 10mil) Between Pad R3_1-1(2060mil,4650.404mil) on Top Layer And Track (2095.433mil,4675.01mil)(2103.307mil,4675.01mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]Waived by Byron Qi at 20/03/30 21:07:18
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (7.874mil < 10mil) Between Pad R3_1-2(2138.74mil,4650.404mil) on Top Layer And Track (2095.433mil,4625.797mil)(2103.307mil,4625.797mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]Waived by Byron Qi at 20/03/30 21:07:18
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (8.513mil < 10mil) Between Pad R3_1-2(2138.74mil,4650.404mil) on Top Layer And Track (2095.433mil,4675.01mil)(2103.307mil,4675.01mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [8.513mil]Waived by Byron Qi at 20/03/30 21:07:18
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (7.874mil < 10mil) Between Pad R3_2-1(2060mil,4400.404mil) on Top Layer And Track (2095.433mil,4375.797mil)(2103.307mil,4375.797mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]Waived by Byron Qi at 20/03/30 21:07:18
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (7.874mil < 10mil) Between Pad R3_2-1(2060mil,4400.404mil) on Top Layer And Track (2095.433mil,4425.01mil)(2103.307mil,4425.01mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]Waived by Byron Qi at 20/03/30 21:07:18
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (7.874mil < 10mil) Between Pad R3_2-2(2138.74mil,4400.404mil) on Top Layer And Track (2095.433mil,4375.797mil)(2103.307mil,4375.797mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]Waived by Byron Qi at 20/03/30 21:07:18
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (8.513mil < 10mil) Between Pad R3_2-2(2138.74mil,4400.404mil) on Top Layer And Track (2095.433mil,4425.01mil)(2103.307mil,4425.01mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [8.513mil]Waived by Byron Qi at 20/03/30 21:07:18
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (7.874mil < 10mil) Between Pad R3_3-1(2060mil,4150mil) on Top Layer And Track (2095.433mil,4125.394mil)(2103.307mil,4125.394mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]Waived by Byron Qi at 20/03/30 21:07:18
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (7.874mil < 10mil) Between Pad R3_3-1(2060mil,4150mil) on Top Layer And Track (2095.433mil,4174.606mil)(2103.307mil,4174.606mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]Waived by Byron Qi at 20/03/30 21:07:18
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (7.874mil < 10mil) Between Pad R3_3-2(2138.74mil,4150mil) on Top Layer And Track (2095.433mil,4125.394mil)(2103.307mil,4125.394mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]Waived by Byron Qi at 20/03/30 21:07:18
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (8.513mil < 10mil) Between Pad R3_3-2(2138.74mil,4150mil) on Top Layer And Track (2095.433mil,4174.606mil)(2103.307mil,4174.606mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [8.513mil]Waived by Byron Qi at 20/03/30 21:07:18
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (7.874mil < 10mil) Between Pad R3_4-1(2060mil,3900mil) on Top Layer And Track (2095.433mil,3875.394mil)(2103.307mil,3875.394mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]Waived by Byron Qi at 20/03/30 21:07:18
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (7.874mil < 10mil) Between Pad R3_4-1(2060mil,3900mil) on Top Layer And Track (2095.433mil,3924.606mil)(2103.307mil,3924.606mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]Waived by Byron Qi at 20/03/30 21:07:18
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (7.874mil < 10mil) Between Pad R3_4-2(2138.74mil,3900mil) on Top Layer And Track (2095.433mil,3875.394mil)(2103.307mil,3875.394mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]Waived by Byron Qi at 20/03/30 21:07:18
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (8.513mil < 10mil) Between Pad R3_4-2(2138.74mil,3900mil) on Top Layer And Track (2095.433mil,3924.606mil)(2103.307mil,3924.606mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [8.513mil]Waived by Byron Qi at 20/03/30 21:07:18
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (7.874mil < 10mil) Between Pad R4_1-1(2060mil,4540mil) on Top Layer And Track (2095.433mil,4515.394mil)(2103.307mil,4515.394mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]Waived by Byron Qi at 20/03/30 21:07:18
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (7.874mil < 10mil) Between Pad R4_1-1(2060mil,4540mil) on Top Layer And Track (2095.433mil,4564.606mil)(2103.307mil,4564.606mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]Waived by Byron Qi at 20/03/30 21:07:18
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (7.874mil < 10mil) Between Pad R4_1-2(2138.74mil,4540mil) on Top Layer And Track (2095.433mil,4515.394mil)(2103.307mil,4515.394mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]Waived by Byron Qi at 20/03/30 21:07:18
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (8.513mil < 10mil) Between Pad R4_1-2(2138.74mil,4540mil) on Top Layer And Track (2095.433mil,4564.606mil)(2103.307mil,4564.606mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [8.513mil]Waived by Byron Qi at 20/03/30 21:07:18
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (7.874mil < 10mil) Between Pad R4_2-1(2060mil,4290mil) on Top Layer And Track (2095.433mil,4265.394mil)(2103.307mil,4265.394mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]Waived by Byron Qi at 20/03/30 21:07:18
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (7.874mil < 10mil) Between Pad R4_2-1(2060mil,4290mil) on Top Layer And Track (2095.433mil,4314.606mil)(2103.307mil,4314.606mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]Waived by Byron Qi at 20/03/30 21:07:18
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (7.874mil < 10mil) Between Pad R4_2-2(2138.74mil,4290mil) on Top Layer And Track (2095.433mil,4265.394mil)(2103.307mil,4265.394mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]Waived by Byron Qi at 20/03/30 21:07:18
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (8.513mil < 10mil) Between Pad R4_2-2(2138.74mil,4290mil) on Top Layer And Track (2095.433mil,4314.606mil)(2103.307mil,4314.606mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [8.513mil]Waived by Byron Qi at 20/03/30 21:07:18
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (7.874mil < 10mil) Between Pad R4_3-1(2060mil,4039.596mil) on Top Layer And Track (2095.433mil,4014.99mil)(2103.307mil,4014.99mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]Waived by Byron Qi at 20/03/30 21:07:18
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (7.874mil < 10mil) Between Pad R4_3-1(2060mil,4039.596mil) on Top Layer And Track (2095.433mil,4064.203mil)(2103.307mil,4064.203mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]Waived by Byron Qi at 20/03/30 21:07:18
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (7.874mil < 10mil) Between Pad R4_3-2(2138.74mil,4039.596mil) on Top Layer And Track (2095.433mil,4014.99mil)(2103.307mil,4014.99mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]Waived by Byron Qi at 20/03/30 21:07:18
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (8.513mil < 10mil) Between Pad R4_3-2(2138.74mil,4039.596mil) on Top Layer And Track (2095.433mil,4064.203mil)(2103.307mil,4064.203mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [8.513mil]Waived by Byron Qi at 20/03/30 21:07:18
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (7.874mil < 10mil) Between Pad R4_4-1(2060.63mil,3789.596mil) on Top Layer And Track (2096.063mil,3764.99mil)(2103.937mil,3764.99mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]Waived by Byron Qi at 20/03/30 21:07:18
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (7.874mil < 10mil) Between Pad R4_4-1(2060.63mil,3789.596mil) on Top Layer And Track (2096.063mil,3814.203mil)(2103.937mil,3814.203mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]Waived by Byron Qi at 20/03/30 21:07:18
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (7.874mil < 10mil) Between Pad R4_4-2(2139.37mil,3789.596mil) on Top Layer And Track (2096.063mil,3764.99mil)(2103.937mil,3764.99mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [7.874mil]Waived by Byron Qi at 20/03/30 21:07:18
+   Waived Violation between Silk To Solder Mask Clearance Constraint: (8.513mil < 10mil) Between Pad R4_4-2(2139.37mil,3789.596mil) on Top Layer And Track (2096.063mil,3814.203mil)(2103.937mil,3814.203mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [8.513mil]Waived by Byron Qi at 20/03/30 21:07:18
+Waived Violations :32
+
+
+Violations Detected : 0
+Waived Violations : 34
+Time Elapsed        : 00:00:02
