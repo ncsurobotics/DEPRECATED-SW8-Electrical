@@ -1,0 +1,86 @@
+Removed Pin From Net: NetName=GND Pin=LED_SENSE-1
+Removed Pin From Net: NetName=LED_SENSE2 Pin=LED_SENSE-2
+Removed Pin From Net: NetName=GND Pin=LED_VCC-1
+Removed Pin From Net: NetName=LED_VCC2 Pin=LED_VCC-2
+Removed Pin From Net: NetName=NFET_GATE2 Pin=R3-1
+Removed Pin From Net: NetName=GND Pin=R3-2
+Change Component Footprint: Designator=LED_VCC Old Footprint=FP-APTD3216CGCK-MFG New Footprint=FP-APT2012MGC-MFG
+Change Component Footprint: Designator=LED_SENSE Old Footprint=FP-APTL3216SURCK-MFG New Footprint=FP-APT2012MGC-MFG
+Change Component Footprint: Designator=R1 Old Footprint=FP-RC3216-IPC_C New Footprint=SMD-0805-RES
+Change Component Footprint: Designator=R2 Old Footprint=FP-RC3216-IPC_C New Footprint=SMD-0805-RES
+Change Component Footprint: Designator=R3 Old Footprint=FP-RC3216-IPC_C New Footprint=SMD-0805-RES
+Change Component Footprint: Designator=R4 Old Footprint=FP-RC3216-IPC_C New Footprint=SMD-0805-RES
+Change Component Footprint: Designator=P2 Old Footprint=MSP430 Launchpad New Footprint=Launchpad Mating Headers
+Change Component Comment : Designator=LED_VCC Old Comment=APTD3216CGCK New Comment=APT2012MGC
+Change Component Comment : Designator=LED_SENSE Old Comment=APTL3216SURCK New Comment=APT2012MGC
+Change Component Comment : Designator=P2 Old Comment=Launchpad New Comment=Launchpad Mating Headers
+Change Component Comment : Designator=R3 Old Comment=RC3216J103CS New Comment=10k
+Change Component Comment : Designator=R1 Old Comment=RC3216J103CS New Comment=220
+Change Component Comment : Designator=R2 Old Comment=RC3216J103CS New Comment=220
+Change Component Comment : Designator=R4 Old Comment=RC3216J103CS New Comment=549
+Change Component Comment : Designator=P1 Old Comment=Temp Sensor New Comment=Temp Sensor Header
+Change Component Designator: OldDesignator=LED_SENSE NewDesignator=D2
+Change Component Designator: OldDesignator=LED_VCC NewDesignator=D1
+Change Managed Component Library Link : Designator=D2 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID=D771CEB2-FC8D-4D06-8BC3-93D046E40ADF New ItemGUID=088FFD6C-28FA-4D71-9FEB-A5F9D955C559 Old RevisionGUID=B5FED326-A1EA-490F-860E-B1FF1F8BF1AB New RevisionGUID=0D36A40D-2D9F-4BC4-89B5-378B0D6F7E0E
+Change Managed Component Library Link : Designator=D1 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID=70AAD85D-013B-4B9E-B042-369489B14BF8 New ItemGUID=088FFD6C-28FA-4D71-9FEB-A5F9D955C559 Old RevisionGUID=25D4305F-2012-42B4-AC7A-6DDFC96B64A0 New RevisionGUID=0D36A40D-2D9F-4BC4-89B5-378B0D6F7E0E
+Change component parameters: Designator = "LED_VCC" ("D1"); Footprint = "FP-APTD3216CGCK-MFG"; UniqueID = "\SWTABJSQ\OMKXRBJG" ("\SWTABJSQ\OMKXRBJG")
+Change component parameters (AddParameter): Name = "Case Code (Imperial)"; Value = "0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Case Code (Metric)"; Value = "2012"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Case/Package"; Value = "0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Color"; Value = "Green"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Dominant Wavelength"; Value = "570nm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Forward Current"; Value = "20mA"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Forward Voltage"; Value = "2.1V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Height"; Value = "0.75mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Illumination Color"; Value = "Green"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Lead Free"; Value = "Lead Free"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Length"; Value = "2mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Lens Color"; Value = "Colorless"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Lens Style"; Value = "Clear"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Lens Transparency"; Value = "Clear"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Luminous Intensity"; Value = "70mcd"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Max Operating Temperature"; Value = "85°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Min Operating Temperature"; Value = "-40°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mount"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package Quantity"; Value = "2000"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Packaging"; Value = "Tape and Reel"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Power Rating"; Value = "75mW"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Test Current"; Value = "20mA"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Viewing Angle"; Value = "120°"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Width"; Value = "1.25mm"; VariantName = "[No Variations]"
+Change component parameters: Designator = "LED_SENSE" ("D2"); Footprint = "FP-APTL3216SURCK-MFG"; UniqueID = "\SWTABJSQ\FAVMSQFJ" ("\SWTABJSQ\FAVMSQFJ")
+Change component parameters (AddParameter): Name = "Case Code (Imperial)"; Value = "0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Case Code (Metric)"; Value = "2012"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Case/Package"; Value = "0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Color"; Value = "Green"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Dominant Wavelength"; Value = "570nm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Forward Current"; Value = "20mA"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Forward Voltage"; Value = "2.1V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Height"; Value = "0.75mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Illumination Color"; Value = "Green"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Lead Free"; Value = "Lead Free"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Length"; Value = "2mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Lens Color"; Value = "Colorless"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Lens Style"; Value = "Clear"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Lens Transparency"; Value = "Clear"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Luminous Intensity"; Value = "70mcd"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Max Operating Temperature"; Value = "85°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Min Operating Temperature"; Value = "-40°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mount"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package Quantity"; Value = "2000"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Packaging"; Value = "Tape and Reel"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Power Rating"; Value = "75mW"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Test Current"; Value = "20mA"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Viewing Angle"; Value = "120°"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Width"; Value = "1.25mm"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=LED_VCC2 Pin=D1-1
+Added Pin To Net: NetName=GND Pin=D1-2
+Added Pin To Net: NetName=LED_SENSE2 Pin=D2-1
+Added Pin To Net: NetName=GND Pin=D2-2
+Added Pin To Net: NetName=GND Pin=R3-1
+Added Pin To Net: NetName=NFET_GATE2 Pin=R3-2
+Added Member To Class: ClassName=LEDs Member=Component D1 APT2012MGC
+Added Member To Class: ClassName=LEDs Member=Component D2 APT2012MGC
+Added Room: Name=LEDs
+Added Room: Name=MSP430 Interface
+Added Room: Name=Temperature Sensor
