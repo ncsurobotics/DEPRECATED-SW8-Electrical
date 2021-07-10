@@ -1,0 +1,2 @@
+Change Component Footprint: Designator=P2 Old Footprint=MSP-EXP430G2 Mating Headers for J2/J6 New Footprint=MSP-EXP430G2 Mating Headers for J2/J4
+Change Component Comment : Designator=P2 Old Comment=J2 & J6 New Comment=To J2 & J4

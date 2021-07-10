@@ -1,0 +1,4 @@
+Record=TopLevelDocument|FileName=NMP Schematic.SchDoc
+Record=SheetSymbol|SourceDocument=NMP Schematic.SchDoc|Designator=LEDs|SchDesignator=LEDs|FileName=Status LEDs.SchDoc|SymbolType=Normal|RawFileName=Status LEDs.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=NMP Schematic.SchDoc|Designator=MSP430 Interface|SchDesignator=MSP430 Interface|FileName=Launchpad Header.SchDoc|SymbolType=Normal|RawFileName=Launchpad Header.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=NMP Schematic.SchDoc|Designator=Temperature Sensor|SchDesignator=Temperature Sensor|FileName=Temperature Sensor.SchDoc|SymbolType=Normal|RawFileName=Temperature Sensor.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 

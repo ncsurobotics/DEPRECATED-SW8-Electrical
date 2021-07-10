@@ -1,0 +1,13 @@
+Change Component Footprint: Designator=P2 Old Footprint=Launchpad Mating Headers New Footprint=MSP-EXP430G2 Mating Headers for J2/J6
+Change Component Footprint: Designator=P1 Old Footprint=PCBComponent_1 New Footprint=1X4 HEADER
+Change Component Comment : Designator=P2 Old Comment=Launchpad Mating Headers New Comment=J2 & J6
+Change component parameters: Designator = "P1"; Footprint = "1X4 HEADER"; UniqueID = "\LMQODRPP\VZWRWAQH"
+Change component parameters. Clean all parameters for all variants
+Change component parameters: Designator = "P2"; Footprint = "MSP-EXP430G2 Mating Headers for J2/J6"; UniqueID = "\HQKGVTXS\RUICVLLG"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "URC"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number"; Value = "N/A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "N/A"; VariantName = "[No Variations]"
+Added Room: Name=LEDs
+Added Room: Name=MSP430 Interface
+Added Room: Name=Temperature Sensor
