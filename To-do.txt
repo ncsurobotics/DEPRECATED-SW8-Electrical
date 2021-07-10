@@ -1,0 +1,7 @@
+-- Immediate -- 
+Change VCC net --> VBAT (for clarity)
+Add the following silkscreen under/over LED1 --> Power
+Build the Bill of Materials
+
+-- For Rev2 --
+Replace U34 with SMD package
